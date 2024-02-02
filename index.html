@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>oo</title>
+	
+</head>
+<style type="text/css">
+	body{
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background: linear-gradient(5deg, #ea4f4c 0%, #6d0019 100%);
+
+  .signature {
+    font-style: italic;
+    font-size: 12px;
+    color: #212121;
+    padding-top: 15px;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.navigationWrapper {
+  position: fixed;
+  top: 0%;
+  left: 15%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #222;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  color: white;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-shadow: 2px 2px 5px red;
+
+
+}
+
+  .logoWrapper {
+    display: flex;}
+    .stylish {
+      font-weight: bold;
+      font-family: alex;
+      font-size: 25px;
+      text-shadow: 2px 2px 5px red;
+    }
+
+    .logo {
+      text-align: center;
+      padding-left: 10px;
+      color: #ea4f4c;
+      text-shadow: 2px 2px 5px red;
+    }
+  
+
+  .navigation {
+    display: flex;
+    list-style-type: none;
+    text-shadow: 2px 2px 5px red;
+
+    li {
+      opacity: 1;
+      list-style-type: none;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .parent {
+      padding: 0 10px;
+      cursor: pointer;
+
+      .link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        color: white;
+
+        &:hover {
+          color: #ea4f4c;
+        }
+
+        .fa-minus {
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+          position: absolute;
+          left: -16px;
+          top: 3px;
+        }
+
+        .fa-plus {
+          opacity: 1;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .fas {
+          color: #ea4f4c;
+          margin: -2px 4px 0;
+          font-size: 10px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .subnavigation {
+      display: none;
+      list-style-type: none;
+      width: 500px;
+      position: absolute;
+      top: 40%;
+      left: 25%;
+      margin: auto;
+      transition: all 0.3s ease-in-out;
+      background-color: #222;
+
+      li a {
+        font-size: 17px;
+        padding: 0 5px;
+      }
+    }
+  }
+
+
+.active.parent {
+  transform: translate(-40px, -25px);
+  .link {
+    font-size: 12px;
+
+    .fa-minus {
+      opacity: 1 !important;
+      font-size: 8px;
+    }
+
+    .fa-plus {
+      opacity: 0 !important;
+    }
+  }
+
+  .subnavigation {
+    display: flex;
+  }
+}
+
+.active#clients {
+  .subnavigation {
+    transform: translate(-150px, 17px);
+  }
+}
+
+.active#services {
+  .subnavigation {
+    transform: translate(-290px, 17px);
+  }
+}
+
+.invisible {
+  opacity: 0 !important;
+  transform: translate(50px, 0);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: maroon;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.about {
+  width: 60%;
+  height: auto;  
+  border: 1px solid red;
+  border-radius:  15px 50px;
+  padding: 20px; 
+  background-image: linear-gradient(white, pink, white, pink, white, pink, white);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px
+
+
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans');
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: grey;
+  font-size: 700%;
+  margin: 1.3rem 0;
+}
+
+.section-lead {
+  width: 70%;
+  margin: 1rem auto 1.5rem;
+  font-size: 30px;
+  font-family: castellar;
+
+}
+
+.service a {
+  color: #5b7abb;
+  display: block;
+}
+
+.service h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #56ceba;
+  font-size: 1.3rem;
+  margin: 1rem 0 0.6rem;
+}
+
+.services-grid {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.service {
+  background: linear-gradient(white, pink, white, pink, white, pink, white);;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  -webkit-box-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #e7e7e7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service i {
+  font-size: 3.45rem;
+  margin: 1rem 0;
+}
+
+.service1 i,
+.service1 h4,
+.service1 .cta {
+  color: #42b7ca;
+}
+
+.service1:hover {
+  border: 2px solid #42b7ca;
+}
+
+.service2 i,
+.service2 h4,
+.service2 .cta {
+  color: #425fca;
+}
+
+.service2:hover {
+  border: 2px solid #425fca;
+}
+
+.service3 i,
+.service3 h4,
+.service3 .cta {
+  color: #9c42ca;
+}
+
+.service3:hover {
+  border: 2px solid #9c42ca;
+}
+
+.service .cta span {
+  font-size: 0.6rem;
+}
+
+.service > * {
+  flex: 1 1 100%;
+}
+
+.service .cta {
+  align-self: flex-end;
+}
+
+@media all and (max-width:900px) {
+  .services-grid {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+}
+body{
+            margin-top: 30px !important;
+            font-family: Helvetica,Arial,sans-serif;
+        }
+        h3{
+            margin: 0;
+        }
+        .our-team{
+            text-align: center;
+            position: relative;
+            color: #fff++ ;
+        }
+        .our-team:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            transition:all 0.3s ease 0s;
+            opacity: 0;
+        }
+        .our-team:hover:before{
+            opacity: 1;
+        }
+        .our-team img{
+            width: 100%;
+            height: auto;
+        }
+        .our-team .team-content{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 0;
+            background-image: linear-gradient(5deg, #ea4f4c 0%, #6d0019 100%);
+            transition:all 0.3s ease 0s;
+        }
+        .our-team:hover .team-content{
+            bottom: 20%;
+        }
+        .our-team .team-content .name{
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+            transition:all 0.3s ease 0s;
+        }
+        .our-team:hover .team-content .name{
+            transform:translateY(30px);
+            transition-delay:0.3s;
+        }
+        .our-team .team-content .post{
+            font-size: 17px;
+            display: block;
+            transition:all 0.3s ease 0s;
+            text-transform: capitalize;
+        }
+        .our-team:hover .team-content .post{
+            transform:translateY(-30px);
+            transition-delay:0.3s;
+        }
+
+        @media screen and (max-width:990px){
+            .our-team{
+                margin-bottom: 30px !important;
+            }
+    
+</style>
+<body style="background: linear-gradient(5deg, #ea4f4c 0%, #6d0019 100%);">
+	<script type="text/javascript">
+		
+	</script>
+<nav class="navigationWrapper">
+  <div class="logoWrapper">
+    <span class="stylish">GALAXY</span>
+    <span class="logo">Web Developer</span>
+  </div>
+  <ul>
+    <li class="parent"><a class="link" href="#">Home</a></li>
+    <li class="parent"><a class="link" href="#c10">About</a></li>
+    <li class="parent"><a class="link" href="#c9">Service</a></li>
+    <li class="parent"><a class="link" href="#c8">Contact</a></li>
+ </ul>
+</nav>
+<br>
+   <div>
+    	<img src="image/logo.png" alt="logo" width="300px" height="300px">
+    </div> </span>
+<about class="c10">
+	<p class="about">We are kano <b>BEST</b> website design agency with vast experience in building fast and responsive websites, Excellent logo design, Graphic design, Digital marketing, Social media managment, Corporate branding, Consultancy, Website design training and WordPress training.<br> We have a team ready to handle your <b>web</b> and <b>mobile app</b> ideas and bring them to life through our iterative design approaches that solves problems and enhance operations of business in Kano and beyound.</p>
+</about>
+
+		
+<service id="c9">
+  <section>
+  <h3>Our Services</h3>
+  <p class="section-lead">We specialize in crafting stunning websites that captivate, engage and convert visitors into loyal costomers.</p>
+    <div class="service service1">
+      <h4>Responsive Websites</h4>
+      <i class="ti-bar-chart">&#9827;</i>
+      <p>In GALAXY we design responsive websites that will amaze your customers.</p>
+    </div>
+
+    <div class="service service2">
+      <h4>Logo</h4>
+      <i class="ti-light-bulb">&#9827;</i>
+      <p>We design perfect logo that cant be resist by EYE.</p>
+    </div>
+
+    <div class="service service3">
+       <h4>Graphic design</h4>
+      <i class="ti-money">&#9827;</i>
+     <p>Bannars, flyer etc that convey information about your business.</p>
+    </div>
+  
+    <div class="service service1">
+      <h4>Digital marketting</h4>
+      <i class="ti-bar-chart">&#9827;</i>
+      <p>In GALAXY we design that will amaze your customers</p>
+    </div>
+
+    <div class="service service2">
+      <h4>Social media managment</h4>
+      <i class="ti-light-bulb">&#9827;</i>
+      <p>We also manage your social media accounts so that your followers will track you there.</p>
+    </div>
+
+    <div class="service service3">
+       <h4>Cooporate branding</h4>
+      <i class="ti-money">&#9827;</i>
+     <p>We help you package your product in the way that they attract customers.</p>
+    </div>
+
+    <div class="service service1">
+      <h4>Web design training</h4>
+      <i class="ti-bar-chart">&#9827;</i>
+      <p>In GALAXY we train peaple that are intrested in web development</p>
+    </div>
+
+    <div class="service service2">
+      <h4>WordPress training</h4>
+      <i class="ti-light-bulb">&#9827;</i>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <div class="service service3">
+       <h4>Consultancy</h4>
+      <i class="ti-money">&#9827;</i>
+     <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  
+  <br>
+  <ourTeam>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="our-team">
+                <img src="image/project manager.png" alt="your browser does not support this image" class="img-responsive">
+                <div class="team-content">
+                    <h3 class="name">USMAN</h3>
+                    <span class="post">Project Manager</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="our-team">
+                <img src="image/senior developer.png" alt="your browser does not support this image" class="img-responsive">
+                <div class="team-content">
+                    <h3 class="name">AHMAD</h3>
+                    <span class="post">Senior Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </ourTeam>
+</section>
+</service>
+
+<contact id="c8">
+</contact>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="4/w3.css">
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<form action="https://www.w3schools.com/action_page.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+<h2 class="w3-center">Contact Us</h2>
+ 
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
+    </div>
+</div>
+
+<p class="w3-center">
+<button class="w3-button w3-section w3-blue w3-ripple"> Send </button>
+</p>
+</form>
+
+
+
+</body>
+</html>
